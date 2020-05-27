@@ -13,6 +13,7 @@ jobs:
     - uses: butlerlogic/action-autotag@stable
       with:
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-        strategy: regex # Optional since regex_pattern is defined
-        root: "version"
+        strategy: regex
+        root: ".github/version"
         regex_pattern: "version=(.*)"
+        tag_message: "Changelog: Please check the latest changelog in [CHANGE-LOG-2020.md](https://github.com/tikivn/TKListing/blob/master/CHANGE-LOG-2020.md)"
